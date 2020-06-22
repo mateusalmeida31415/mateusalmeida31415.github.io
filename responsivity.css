@@ -1,0 +1,9 @@
+@media (max-width: 540px) {
+  .box {
+    max-height: 800px;
+  }
+  .title {
+    font-size: 20px;
+  }
+}
+/*# sourceMappingURL=responsivity.css.map */

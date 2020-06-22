@@ -1,0 +1,111 @@
+@import "global-config";
+@import "functions";
+@import "config";
+@import "animations";
+
+.pag{
+    height: 100vh;
+    background-color: $color-pag;
+    color: $font-color;
+    .logo{
+        position: absolute;
+        height: 100px;
+        width: 100px;
+    }
+    .item1{
+        top: 10px;
+        left: 10px;
+    }
+    .item2{
+        top: 10px;
+        right: 10px;
+    }
+    .item3{
+        bottom: 10px;
+        left: 10px;
+    }
+    .item4{
+        bottom: 10px;
+        right: 10px;
+    }
+    //Centrazilar o conteudo 
+    @include flex();
+    .box{
+        border: 2px solid $font-color;
+        border-radius: 5px;
+        position: absolute;
+        max-width: 800px;
+        width: 100%;
+        max-height: 400px;
+        height: 100%;
+        margin: 40px;
+        &-lineNumbers{
+            border-right: 2px solid $font-color;
+            width: 50px;
+            height: 100%;
+            position: absolute;
+            //z-index: 1;
+            font-size: $font-size;
+            &-container{
+                margin-top: 10px;
+                @include flex();
+                flex-direction: column;
+            }
+        }
+        &-text{
+            position: absolute;
+            font-size: $font-size;
+            //text-align: justify;
+            top: 0px;
+            margin: 10px 10px 10px 60px;
+            &-minhafrase{
+                margin: $p-height;
+            }
+            &-return{
+                margin: $p-height 0px;
+            }
+        }
+        
+    }
+    .title{
+        align-self: flex-start;
+        padding-top: 30px; 
+        position: relative;
+        &::after{
+            content: " ";
+            background-color: $font-color;
+            position: absolute;
+            width: 10px;
+            height: 30px;
+            animation: blink 1s linear 0s infinite;
+        }
+    }
+
+}
+
+.box-winner{
+    position: absolute;
+    bottom: 10px;
+    z-index: 1;
+    color: $font-color;
+    border: 2px solid $font-color;
+    left: 50%;
+    transform: translate(-50%);
+    max-width: 800px;
+    width: 100%;
+    padding: 20px;
+    border-radius: 5px;
+    &-text{
+        font-size: $font-size;
+        &::after{
+            content: " ";
+            background-color: $font-color;
+            position: absolute;
+            width: 5px;
+            height: 20px;
+            animation: blink 1s linear 0s infinite;
+            display: inline;
+        }
+    }
+    
+}

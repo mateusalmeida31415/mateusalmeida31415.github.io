@@ -1,0 +1,16 @@
+@media(max-width: 540px){
+    .box{
+        max-height: 800px;
+    }
+    .title{
+        font-size: 20px;
+        &::after{
+            content: " ";
+            background-color: $font-color;
+            position: absolute;
+            width: 10px;
+            height: 20px;
+            animation: blink 2s linear 0s infinite;
+        }
+    }
+}
