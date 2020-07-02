@@ -85,15 +85,6 @@ body {
   height: 100vh;
   background-color: black;
   color: #20C20E;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
 }
 
 .pag .logo {
@@ -126,11 +117,13 @@ body {
   border: 2px solid #20C20E;
   border-radius: 5px;
   position: absolute;
+  right: 50%;
+  -webkit-transform: translateX(50%);
+          transform: translateX(50%);
   max-width: 800px;
   width: 100%;
   max-height: 400px;
   height: 100%;
-  margin: 40px;
 }
 
 .pag .box-lineNumbers {
@@ -178,6 +171,7 @@ body {
       align-self: flex-start;
   padding-top: 30px;
   position: relative;
+  text-align: center;
 }
 
 .pag .title::after {
